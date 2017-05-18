@@ -60,15 +60,12 @@ public class Vista implements Initializable{
 			return dCantidad;
 		}
 
-
 		public void cuotaActualizada() {
 			// TODO Auto-generated method stub
 			CuotaLabel.setVisible(true);
 			cuota.setVisible(true);
 			String sAux = String.format("%.2f",modelo.getCuota());
 			cuota.setText(sAux);
-
-
 		}
 
 		public void escuchador(){
