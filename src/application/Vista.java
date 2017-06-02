@@ -13,8 +13,6 @@ import javafx.scene.control.TextField;
 public class Vista implements Initializable{
 
 		// TODO Auto-generated method stub
-		private  Main ProgramaPrincipal;
-
 		@FXML
 	    private Button myButton;
 
@@ -34,14 +32,12 @@ public class Vista implements Initializable{
 	    private Label CuotaLabel;
 
 		private Modelo modelo;
+		private Controlador controlador;
 
 	    public void setModelo(Modelo modelo){
 			this.modelo = modelo;
 		}
 
-	    public void setProgramaPrincipal(Main ProgramaPrincipal) {
-	        this.ProgramaPrincipal = ProgramaPrincipal;
-	    }
 
 		public double getCantidad() {
 			// TODO Auto-generated method stub
@@ -69,11 +65,17 @@ public class Vista implements Initializable{
 		}
 
 		public void escuchador(){
-			ProgramaPrincipal.solicitadoCalculo();
+			this.controlador.solicitadoCalculo();
 		}
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 			// TODO Auto-generated method stub
+
+		}
+
+		public void setControlador(Controlador controlador2) {
+			// TODO Auto-generated method stub
+			this.controlador = controlador2;
 
 		}
 
